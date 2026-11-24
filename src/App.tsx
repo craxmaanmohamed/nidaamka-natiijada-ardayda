@@ -50,7 +50,7 @@ import {
 // ============================================================================
 // 0. ERROR BOUNDARY (QABTE KHALADAADKA RUNTIME-KA)
 // ============================================================================
-class ErrorBoundary extends Component<any> {
+class ErrorBoundary extends Component<any, { hasError: boolean; errorMessage: string }> {
   constructor(props) {
     super(props);
     this.state = { hasError: false, errorMessage: '' };
